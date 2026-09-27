@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XENOWEBSITE</title>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css">
+    <h1>Welcome to the XENOWEBSITE</h1>
+        <h2>This is totally a healthy locally hosted website!</h2>
+            <img src="Images/broccoli.png" alt="A cool image of a broccoli" style="width: 150; height: 150;">
+                <div class="button-layout-horizontal">   
+                    <button onclick="showMessage(1)">Click Me!</button>  
+                    <button onclick="showMessage(2)">Click Me Too!</button>
+                    <a href="Blog/blog.html"><button>Potato Blog</button></a>
+                </div>
+                <h3 id="debugForButtons" style="color: rgb(16, 16, 16);">here lies the for the. it will refresh if you click one of the.</h3>
+                
+   
+
+
+
+
+    <h2>vvv WIP canvas. Paint Stuff Here vvv</h2>
+        <div class="centered-layout">
+            <div class="layout">
+                <canvas id="myCanvas"></canvas>
+                <div class="slider-container">
+                    <input type="range" id="verticalSlider" min="0" max="100" value="50" orient="vertical">
+                    <label for="verticalSlider">Brush Size: <span id="sliderValue">50</span></label>
+                </div>
+            </div>
+        </div>
+    
+    <div class="button-layout-horizontal">
+        <!-- canvas buttons -->
+        <button onclick="changeColor()" id="colorButton">Color Picker</button>
+        <button id="resetButton">Reset Canvas</button>
+    </div>
+
+    
+    <!-- <div id="popupOverlay" class="hidden">
+        <div id="popupWindow">
+            <h2>Meow~! This is a Pop-Up!</h2>
+            <p>Hello, world! I’m your cute pop-up content!</p>
+            <button id="closePopup">Close</button>
+        </div>
+    </div> -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script>
+    <script src="script.js"></script>
+   
+   
+</body>
+</html>

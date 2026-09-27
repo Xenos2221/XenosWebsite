@@ -1,0 +1,192 @@
+@import url("Blog/blog.css");
+
+/* Root variables (visible everywhere) */
+:root 
+{
+    --body-bg-color: #cccccc;
+}
+
+/* Defining font face */
+@font-face 
+{
+    font-family: 'Roboto';
+    src: url('Fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+/* Body contains basically everything */
+body 
+{
+    justify-content: center; /* Horizontally center the layout */
+    align-items: center;    /* Vertically center the layout */
+    margin: 0;              /* Remove default browser margins */
+    font-family: 'XenoPixelFont', sans-serif;
+    background-color: var(--body-bg-color);
+    color: #0b0b0b;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Hidden by default */
+.hidden 
+{
+    display: none;
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Layout containers for canvas and slider */
+.centered-layout 
+{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Center vertically */
+    min-height: 30vh;      /* Full viewport height for vertical centering */
+    background-color: var(--body-bg-color, #f0f0f0); /* Use your custom body color */
+    z-index: 1;
+}
+.layout 
+{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Vertically align the canvas and slider */
+    gap: 20px;              /* Space between the canvas and slider */
+    padding: 20px;
+    background-color: #707070; /* Optional: White background for layout clarity */
+    border-radius: 8px;     /* Optional: Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Optional: Light shadow */
+    z-index: 1;
+}
+
+.button-layout-horizontal
+{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;    /* Vertically align the canvas and slider */
+    gap: 20px;              /* Space between the canvas and slider */
+    padding: 20px;
+    z-index: 1;
+}
+
+button 
+{
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 10;
+    background-color: #a0a0a0;
+    color: black;
+    border-radius: 7px;
+    z-index: 1;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7); /* Optional: Light shadow */
+}
+
+canvas
+{
+    cursor: crosshair;
+    background-color: var(--body-bg-color);
+    border: 1px solid #000000; /* Optional border for clarity */
+    border-radius: 7px;
+}
+
+
+/* Overlay (background behind the pop-up) */
+#popupOverlay 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Pop-up window */
+#popupWindow {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* SLIDER STUFF*/
+
+/* Slider Container */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50px;
+    margin: 20px auto;
+    color: #333;
+}
+
+/* Vertical slider */
+input[type="range"] 
+{
+    appearance: none;
+    -webkit-appearance: slider-vertical; /* For WebKit browsers (Chrome, Safari)
+    writing-mode: bt-lr; /* Vertical slider for non-WebKit browsers */
+    height: 200px;
+    width: 10px;
+    background: transparent; /* Remove default styling */
+}
+
+
+/* Track behind the thumb button */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 10px;
+    height: 100%; /* Match slider height */
+    background: #ccc; /* Light gray track */
+    border-radius: 5px; /* Rounded edges */
+}
+
+input[type="range"]::-moz-range-track {
+    width: 10px;
+    height: 100%; /* Match slider height */
+    background: #ccc; /* Light gray track */
+    border-radius: 5px; /* Rounded edges */
+}
+
+input[type="range"]::-ms-track {
+    width: 10px;
+    height: 100%; /* Match slider height */
+    background: #ccc; /* Light gray track */
+    border-radius: 5px; /* Rounded edges */
+    border: none; /* Remove unwanted borders */
+    color: transparent; /* Hide any unwanted text */
+}
+
+
+/* Slider thumbs */
+input[type="range"]::-webkit-slider-thumb 
+{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+input[type="range"]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    background: #000000;
+    border-radius: 50%;
+    cursor: pointer;
+}

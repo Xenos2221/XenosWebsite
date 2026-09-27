@@ -1,0 +1,51 @@
+.blog-post {
+  max-width: 75ch; /* Optimal reading line length (60-75 characters) */
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 1.125rem; /* 18px base for comfortable reading */
+  line-height: 1.7;
+  color: #000000;
+}
+
+/* Typography Hierarchy */
+.blog-post h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+.blog-post h2 {
+  font-size: 1.75rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.blog-post p {
+  margin-bottom: 1.5rem;
+}
+
+/* Links & Quotes */
+.blog-post a {
+  color: #0969da;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.blog-post blockquote {
+  margin: 2rem 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid #0969da;
+  font-style: italic;
+  color: #57606a;
+}
+
+/* Responsive Media */
+.blog-post img,
+.blog-post video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
